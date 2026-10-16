@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><title>Rượu Thời Đại Content Factory</title>
+<h1>AI Content Factory</h1>
+<input type="file" id="f" accept="image/*"> <input id="p" placeholder="hoặc tên sản phẩm">
+<button onclick="go()">Tạo bài</button><pre id="o" style="white-space:pre-wrap"></pre>
+<script>
+async function go(){
+  const d=new FormData(),f=document.getElementById('f').files[0];
+  if(f)d.append('image',f);d.append('product_name',document.getElementById('p').value);
+  o.textContent='Đang tạo...';
+  const r=await (await fetch('/api/content',{method:'POST',body:d})).json();
+  o.textContent=r.posts.map(x=>x.text+(x.missing.length?'\n[Thiếu: '+x.missing+']':'')).join('\n\n=====\n\n');
+}
+</script>

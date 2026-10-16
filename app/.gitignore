@@ -1,0 +1,3 @@
+__pycache__/
+vector-db/
+.pytest_cache/
