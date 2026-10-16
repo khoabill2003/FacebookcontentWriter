@@ -1,6 +1,3 @@
-# Slogan
+# Slogan chính thức
 
-<!-- Mỗi slogan một dòng gạch đầu dòng. Validator yêu cầu bài dùng một trong các slogan này (dòng chứa {{ }} bị bỏ qua). -->
-
-- {{Slogan 1 của Rượu Thời Đại}}
-- {{Slogan 2}}
+Rượu Thời Đại | Chính hãng làm nên chất lượng, tận tâm vun bồi niềm tin.
